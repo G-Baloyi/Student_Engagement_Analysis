@@ -1,12 +1,12 @@
-# 🎓 RIT Student Engagement Analysis
+# Student Engagement Analysis
 
-> Predicting student participation in learning opportunities using machine learning on real RIT sign-up and engagement data.
+> Predicting student participation in learning opportunities using machine learning on real sign-up and engagement data.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
-This project analyses historical student sign-up and participation records from Rochester Institute of Technology (RIT) to:
+This project analyses historical student sign-up and participation records to:
 
 - Understand engagement patterns across opportunity types, countries, and demographics
 - Identify the key drivers of student participation
@@ -17,66 +17,12 @@ This project analyses historical student sign-up and participation records from 
 
 ---
 
-## 📁 Project Structure
-
-```
-RIT_Student_Engagement_Project/
-│
-├── data/
-│   ├── raw/                          # Original dataset (do not modify)
-│   │   └── RIT_Opportunity_Wise_Data_Sheet.csv
-│   └── processed/                    # Cleaned & engineered data
-│       ├── RIT_Cleaned_Engineered.csv
-│       ├── predictions.csv
-│       └── analysis_summary.json
-│
-├── notebooks/
-│   ├── 01_data_understanding.py      # Week 1 – Data exploration & cleaning
-│   ├── 02_eda_cohort_analysis.py     # Week 2 – EDA & cohort analysis
-│   ├── 03_ml_modeling.py             # Week 3 – ML training & evaluation
-│   └── 04_final_insights_recommendations.py  # Week 4 – Insights & recommendations
-│
-├── outputs/
-│   └── figures/                      # All generated charts and visualisations
-│       ├── 01_status_distribution.png
-│       ├── 02_opportunity_categories.png
-│       ├── 03_top_countries.png
-│       ├── 04_gender_distribution.png
-│       ├── 05_missing_values.png
-│       ├── 06_signups_over_time.png
-│       ├── 07_participation_by_category.png
-│       ├── 08_participation_by_country.png
-│       ├── 09_age_distribution.png
-│       ├── 10_top_opportunities.png
-│       ├── 11_heatmap_category_country.png
-│       ├── 12_signup_to_apply_lag.png
-│       ├── 13_model_comparison_auc.png
-│       ├── 14_roc_curves.png
-│       ├── 15_confusion_matrix.png
-│       ├── 16_feature_importance.png
-│       ├── 17_predicted_probabilities.png
-│       ├── 18_engagement_funnel.png
-│       ├── 19_participation_gender_category.png
-│       └── 20_participation_trend_year.png
-│
-├── scripts/
-│   ├── data_preprocessing.py         # Standalone cleaning pipeline
-│   ├── train_model.py                # Standalone model training
-│   └── generate_figures.py           # Re-generate all figures
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone & install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/RIT_Student_Engagement_Project.git
+git clone https://github.com/YOUR_G-Baloyi/Student_Engagement.git
 cd RIT_Student_Engagement_Project
 pip install -r requirements.txt
 ```
@@ -112,7 +58,7 @@ jupytext --to notebook notebooks/01_data_understanding.py
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 | Field | Description |
 |---|---|
@@ -130,19 +76,19 @@ jupytext --to notebook notebooks/01_data_understanding.py
 
 ---
 
-## 🤖 Models Trained
+## Models Trained
 
 | Model | Test AUC | CV AUC (5-fold) |
 |---|---|---|
 | Logistic Regression | 0.878 | ~0.87 |
 | Random Forest | 0.912 | ~0.91 |
-| **Gradient Boosting** ✅ | **0.917** | **~0.91** |
+| **Gradient Boosting** | **0.917** | **~0.91** |
 
 **Target variable:** `is_participated` — 1 if status is Team Allocated, Started, or Rewards Award
 
 ---
 
-## 💡 Key Findings
+## Key Findings
 
 1. **41.7% rejection rate** — the single largest status group; pre-screening could dramatically improve fit
 2. **Events & Competitions** outperform Internships in participation rate
@@ -152,7 +98,7 @@ jupytext --to notebook notebooks/01_data_understanding.py
 
 ---
 
-## 📋 Recommendations
+## Recommendations
 
 | # | Recommendation | KPI |
 |---|---|---|
@@ -164,7 +110,7 @@ jupytext --to notebook notebooks/01_data_understanding.py
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 See `requirements.txt`. Core libraries:
 
@@ -174,14 +120,3 @@ See `requirements.txt`. Core libraries:
 
 ---
 
-## 👤 Author
-
-**Gee**  
-RIT Excelerate Internship – Data Science Track  
-Analysis Period: 2022–2024 cohort data
-
----
-
-## 📄 License
-
-This project is for educational purposes as part of the RIT Excelerate Internship programme.
